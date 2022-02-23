@@ -1,10 +1,11 @@
 import React from "react"
 import Header from "../Header/Header.js"
 // import Meme from "../meme/Meme.js"
-import John from "../john/John.js"
+// import John from "../john/John.js"
 import "./App.css"
 import Blogs from "../../blogs"
 import Body from "../Header/Body.js"
+import data from "../Boxes/data.js"
 
 
 function App(){
@@ -22,18 +23,29 @@ function App(){
     const [user,setUser] = React.useState({
         name:"Joe",
     })
+    const [squares,setSquares] = React.useState(data)
 
-    return (
-        <div>
-            <Header name = {user.name}/>
-            {/* <Meme /> */}
-            {/* <button onClick={addItem}>Add item</button>
-            {thingsElements} */}
-            <Body name={user.name}/>
-            <John />
-            {/* <Blogs></Blogs> */}
+    // return (
+    //     <div>
+    //         <Header name = {user.name}/>
+    //         {/* <Meme /> */}
+    //         {/* <button onClick={addItem}>Add item</button>
+    //         {thingsElements} */}
+    //         <Body name={user.name}/>
+    //         {/* <John /> */}
+    //         {/* <Blogs></Blogs> */}
 
-        </div>
+    //     </div>
+    // )
+    const squareElements = squares.map(square=>(
+        <div className="box"key={square.id}></div>
+    ))
+    return(
+        <main>
+            {squareElements}
+        </main>
     )
+   
+    
 }
 export default App; 
