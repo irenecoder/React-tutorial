@@ -6,6 +6,8 @@ import "./App.css"
 // import Blogs from "../../blogs"
 // import Body from "../Header/Body.js"
 import data from "../Boxes/data.js"
+import Boxes from "../Boxes/Boxes.js"
+
 
 
 function App(props){
@@ -38,11 +40,8 @@ function App(props){
     //     </div>
     // )
     // props.darkMode
-    const styles = {
-        backgroundColor : props.darkMode ? "#222222": "#cccccc"
-    }
     const squareElements = squares.map(square=>(
-        <div style = {styles}className="box"key={square.id}></div>
+        <Boxes key={square.id} on={square.on}/>
     ))
     
     return(
