@@ -1,14 +1,14 @@
 import React from "react"
-import Header from "../Header/Header.js"
+// import Header from "../Header/Header.js"
 // import Meme from "../meme/Meme.js"
 // import John from "../john/John.js"
 import "./App.css"
-import Blogs from "../../blogs"
-import Body from "../Header/Body.js"
+// import Blogs from "../../blogs"
+// import Body from "../Header/Body.js"
 import data from "../Boxes/data.js"
 
 
-function App(){
+function App(props){
 
 
     // const [thingsArray,setThingsArray] = React.useState(["Thing1","Thing 2"])
@@ -20,9 +20,9 @@ function App(){
 
     // }
     // const thingsElements = thingsArray.map(Thing =><p key={Thing}>{Thing}</p>)
-    const [user,setUser] = React.useState({
-        name:"Joe",
-    })
+    // const [user,setUser] = React.useState({
+        // name:"Joe",
+    // })
     const [squares,setSquares] = React.useState(data)
 
     // return (
@@ -37,9 +37,14 @@ function App(){
 
     //     </div>
     // )
+    // props.darkMode
+    const styles = {
+        backgroundColor : props.darkMode ? "#222222": "#cccccc"
+    }
     const squareElements = squares.map(square=>(
-        <div className="box"key={square.id}></div>
+        <div style = {styles}className="box"key={square.id}></div>
     ))
+    
     return(
         <main>
             {squareElements}
