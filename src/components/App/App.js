@@ -1,8 +1,11 @@
 import React from "react"
-// import Header from "../Header/Header.js"
+import Header from "../Header/Header.js"
 // import Meme from "../meme/Meme.js"
 import John from "../john/John.js"
 import "./App.css"
+import Blogs from "../../blogs"
+import Body from "../Header/Body.js"
+
 
 function App(){
 
@@ -16,21 +19,21 @@ function App(){
 
     // }
     // const thingsElements = thingsArray.map(Thing =><p key={Thing}>{Thing}</p>)
-
-
-
-
+    const [user,setUser] = React.useState({
+        name:"Joe",
+    })
 
     return (
         <div>
-            {/* <Header /> */}
+            <Header name = {user.name}/>
             {/* <Meme /> */}
-
             {/* <button onClick={addItem}>Add item</button>
             {thingsElements} */}
+            <Body name={user.name}/>
             <John />
+            {/* <Blogs></Blogs> */}
 
         </div>
     )
 }
-export default App;
+export default App; 

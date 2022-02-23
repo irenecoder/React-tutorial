@@ -1,0 +1,24 @@
+*{
+    padding:0;
+    margin:0;
+}
+.card{
+    width:400px;
+    height: 600px;
+    box-shadow: 9px;
+
+}
+.card-image{
+    width: 100%;
+    margin: 30px;
+}
+.card-info{
+    padding: 20px;
+
+}
+.card-favourite{
+    width: 70px;
+    
+}
+
+
