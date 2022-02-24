@@ -40,6 +40,7 @@ function App(props){
     //     </div>
     // )
     // props.darkMode
+
     const squareElements = squares.map(square=>(
         <Boxes key={square.id} on={square.on}/>
     ))
