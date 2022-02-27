@@ -7,6 +7,7 @@ import "./App.css"
 // import Body from "../Header/Body.js"
 import data from "../Boxes/data.js"
 import Boxes from "../Boxes/Boxes.js"
+import Form from "../Form/Form"
 
 
 
@@ -74,6 +75,7 @@ function App(props){
     return(
         <main>
             {squareElements}
+            <Form />
         </main>
     )
    
